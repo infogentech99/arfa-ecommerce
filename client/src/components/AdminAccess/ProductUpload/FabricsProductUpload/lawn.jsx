@@ -28,7 +28,7 @@ const LawnProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/lawn",
+        "https://arfa-ecommerce.onrender.com/api/lawn",
         productData
       );
       alert("Product added successfully!");

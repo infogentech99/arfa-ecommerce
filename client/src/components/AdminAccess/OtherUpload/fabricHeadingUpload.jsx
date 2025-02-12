@@ -22,7 +22,7 @@ const FabricHeadingUpload = () => {
     try {
       // Send POST request to add caegory to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/fabriclist",
+        "https://arfa-ecommerce.onrender.com/api/fabriclist",
         fabricData
       );
       alert("Fabric added successfully!");

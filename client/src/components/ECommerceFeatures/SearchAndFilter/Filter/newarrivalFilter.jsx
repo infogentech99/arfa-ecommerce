@@ -20,7 +20,7 @@ const NewArrivalFilter = () => {
 
     // Fetching the list of NewArrival from the backend API
     axios
-      .get("http://localhost:4000/api/newarrival")
+      .get("https://arfa-ecommerce.onrender.com/api/newarrival")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const NewArrivalFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/newarrival/${id}`
+        `https://arfa-ecommerce.onrender.com/api/newarrival/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

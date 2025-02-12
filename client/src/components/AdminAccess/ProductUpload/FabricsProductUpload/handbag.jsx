@@ -28,7 +28,7 @@ const HandbagProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/handbags",
+        "https://arfa-ecommerce.onrender.com/api/handbags",
         productData
       );
       alert("Product added successfully!");

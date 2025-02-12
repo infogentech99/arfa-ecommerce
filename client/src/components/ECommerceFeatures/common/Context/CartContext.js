@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
   // Fetch cart data from the API
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/cartandplaceorder")
+      .get("https://arfa-ecommerce.onrender.com/api/cartandplaceorder")
       .then((res) => {
         setShoppingCart(res.data);
       })
@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
   const updateCart = async (id, updatedQty) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/cartandplaceorder/${id}`,
+        `https://arfa-ecommerce.onrender.com/api/cartandplaceorder/${id}`,
         {
           noOfItems: updatedQty,
         }
@@ -52,7 +52,7 @@ export const CartProvider = ({ children }) => {
   // Remove a product from the cart
   const handleRemoveCart = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/cartandplaceorder/${id}`);
+      await axios.delete(`https://arfa-ecommerce.onrender.com/api/cartandplaceorder/${id}`);
       setShoppingCart((prev) => prev.filter((cart) => cart._id !== id));
       alert("Cart removed successfully!");
     } catch (error) {

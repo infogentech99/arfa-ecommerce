@@ -20,7 +20,7 @@ const VelvetFilter = () => {
 
     // Fetching the list of Wmen from the backend API
     axios
-      .get("http://localhost:4000/api/velvet")
+      .get("https://arfa-ecommerce.onrender.com/api/velvet")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const VelvetFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/velvet/${id}`
+        `https://arfa-ecommerce.onrender.com/api/velvet/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

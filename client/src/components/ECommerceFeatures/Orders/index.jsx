@@ -18,7 +18,7 @@ const Orders = () => {
   // Function to fetch active orders from the backend
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/ordered");
+      const res = await axios.get("https://arfa-ecommerce.onrender.com/api/ordered");
       setActiveOrders(res.data);
     } catch (err) {
       console.error("Error fetching data", err);
@@ -29,7 +29,7 @@ const Orders = () => {
   const cancelOrder = async (id) => {
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/ordered/cancel/${id}`
+        `https://arfa-ecommerce.onrender.com/api/ordered/cancel/${id}`
       );
       if (res.status === 200) {
         alert(res.data.message);

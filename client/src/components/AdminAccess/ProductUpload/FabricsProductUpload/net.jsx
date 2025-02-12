@@ -28,7 +28,7 @@ const NetProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/net",
+        "https://arfa-ecommerce.onrender.com/api/net",
         productData
       );
       alert("Product added successfully!");

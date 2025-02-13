@@ -10,8 +10,10 @@ export const AdminProvider = ({ children }) => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        if (user.uid === "ChowPpoQlKbcbd5zNLlEeqcdbaA3") {
-          console.log("He is Admin");
+
+        //ChowPpoQlKbcbd5zNLlEeqcdbaA3
+        if (user.uid === "oSU6Oa5MgROIglTj5qSdO2zfCHF2") {
+          console.log("Admin Access");
           setAdmin(true);
         } else {
           setAdmin(false);

@@ -5,7 +5,7 @@ import SidenavUserBtn from "./SideNavUser";
 const Sidenavbar = ({ handleClose, setIsSideNavVisible }) => {
   return (
     <>
-      <aside className="bg-#134B70-950 sm:hidden w-3/4 h-screen fixed top-0 left-0 z-40">
+      <aside className="bg-gray-950 sm:hidden w-3/4 h-screen fixed top-0 left-0 z-40">
         {/* Close button for the side nav */}
         <div className="flex justify-end p-2">
           <button

@@ -16,7 +16,7 @@ const SliderUpload = () => {
     try {
       // Send POST request to add slider to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/slider",
+        "https://arfa-ecommerce.onrender.com/api/slider",
         sliderData
       );
       alert("Slider added successfully!");

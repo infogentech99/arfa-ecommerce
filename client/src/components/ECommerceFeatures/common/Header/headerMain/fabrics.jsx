@@ -10,7 +10,7 @@ const Fabrics = () => {
   // Fetch fabrics from the API on component mount
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/fabriclist")
+      .get("https://arfa-ecommerce.onrender.com/api/fabriclist")
       .then((res) => {
         setFabrictitle(res.data);
       })

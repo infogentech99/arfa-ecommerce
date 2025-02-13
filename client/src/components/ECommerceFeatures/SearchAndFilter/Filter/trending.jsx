@@ -20,7 +20,7 @@ const TrendingFilter = () => {
 
     // Fetching the list of Trending from the backend API
     axios
-      .get("http://localhost:4000/api/trending")
+      .get("https://arfa-ecommerce.onrender.com/api/trending")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const TrendingFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/trending/${id}`
+        `https://arfa-ecommerce.onrender.com/api/trending/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

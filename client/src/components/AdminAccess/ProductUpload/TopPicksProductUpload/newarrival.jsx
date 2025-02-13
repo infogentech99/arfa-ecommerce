@@ -29,7 +29,7 @@ const NewArrivalProductUpload = () => {
       // Send POST request to add product to the backend
       const response = await axios.post(
         // "https://mu2-infinity-mern-stack-e-commerce.onrender.com/api/newarrival",
-        "http://localhost:4000/api/newarrival",
+        "https://arfa-ecommerce.onrender.com/api/newarrival",
         productData
       );
       alert("Product added successfully!");

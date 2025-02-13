@@ -20,7 +20,7 @@ const LawnFilter = () => {
 
     // Fetching the list of me's products from the backend API
     axios
-      .get("http://localhost:4000/api/lawn")
+      .get("https://arfa-ecommerce.onrender.com/api/lawn")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const LawnFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/lawn/${id}`
+        `https://arfa-ecommerce.onrender.com/api/lawn/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

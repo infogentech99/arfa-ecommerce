@@ -28,7 +28,7 @@ const ChiffonProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "http://localhost:4000/api/chiffon",
+        "https://arfa-ecommerce.onrender.com/api/chiffon",
         productData
       );
       alert("Product added successfully!");

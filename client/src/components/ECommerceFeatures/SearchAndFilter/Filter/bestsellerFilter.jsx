@@ -20,7 +20,7 @@ const BestsellerFilter = () => {
 
     axios
       // Fetching the list of best selling products from the backend API
-      .get("http://localhost:4000/api/bestseller")
+      .get("https://arfa-ecommerce.onrender.com/api/bestseller")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const BestsellerFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/bestseller/${id}`
+        `https://arfa-ecommerce.onrender.com/api/bestseller/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

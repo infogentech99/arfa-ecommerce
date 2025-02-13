@@ -23,8 +23,8 @@ const Login = () => {
       </section>
 
       <SignUpBtn
-        data={"New to Infinity?"}
-        button={"Create your Infinity account"}
+        data={"New to Arfa?"}
+        button={"Create your Arfa account"}
         link={"/signup"} // Link to sign-up page
       />
 

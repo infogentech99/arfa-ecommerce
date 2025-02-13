@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import infinity from "../../../assets/infinity-black.png";
+//import infinity from "../../../assets/infinity-black.png";
+
+import arfa from "../../../assets/arfa.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,11 +21,11 @@ const Header = () => {
 
       <img
         className="w-8 h-8 inline-block"
-        src={infinity}
-        alt="Infinity Logo"
+        src={arfa}
+        alt="Arfa Logo"
       />
       <h1 className="text-2xl text-black font-medium italic">
-        finity<span className="text-sm">.in</span>
+        Arfa<span className="text-sm">.in</span>
       </h1>
     </header>
   );

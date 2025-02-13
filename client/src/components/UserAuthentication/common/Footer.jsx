@@ -14,7 +14,7 @@ const Footer = () => {
       </ul>
 
       <p className="text-center">
-        © 1996-2024, Infinity.com, Inc. or its affiliates
+        © 1996-2024, Arfa.com, Inc. or its affiliates
       </p>
     </section>
   );

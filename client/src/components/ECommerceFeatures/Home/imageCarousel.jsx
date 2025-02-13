@@ -10,7 +10,7 @@ const ImageCarousel = () => {
   // Fetch images from the API
   useEffect(() => {
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/slider")
+      .get("http://localhost:4000/api/slider")
       .then((res) => {
         setImages(res.data);
       })

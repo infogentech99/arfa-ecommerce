@@ -20,7 +20,7 @@ const HandbagFilter = () => {
 
     // Fetching the list of Handbag from the backend API
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/handbags")
+      .get("http://localhost:4000/api/handbags")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const HandbagFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `https://arfa-ecommerce.onrender.com/api/handbags/${id}`
+        `http://localhost:4000/api/handbags/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

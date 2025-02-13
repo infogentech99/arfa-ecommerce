@@ -28,7 +28,7 @@ const VelvetProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/velvet",
+        "http://localhost:4000/api/velvet",
         productData
       );
       alert("Product added successfully!");

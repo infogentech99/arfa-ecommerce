@@ -28,7 +28,7 @@ const TrendingProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/trending",
+        "http://localhost:4000/api/trending",
         productData
       );
       alert("Product added successfully!");

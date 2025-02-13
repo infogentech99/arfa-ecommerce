@@ -28,7 +28,7 @@ const WatchProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/watches",
+        "http://localhost:4000/api/watches",
         productData
       );
       alert("Product added successfully!");

@@ -16,7 +16,7 @@ const SingleProduct = ({ selectedProduct, setSelectedProduct }) => {
 
     try {
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/cartandplaceorder",
+        "http://localhost:4000/api/cartandplaceorder",
         cartData
       );
       console.log(response.data);

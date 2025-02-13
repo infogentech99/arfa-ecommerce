@@ -18,7 +18,7 @@ const OrderCancelled = () => {
   // Function to fetch cancelled orders
   const fetchCancelledOrders = async () => {
     try {
-      const res = await axios.get("https://arfa-ecommerce.onrender.com/api/cancelled");
+      const res = await axios.get("http://localhost:4000/api/cancelled");
       setCancelledOrders(res.data);
     } catch (err) {
       console.error("Error fetching data", err);
@@ -28,7 +28,7 @@ const OrderCancelled = () => {
   // Function to remove cancelled order from history
   const handleRemoveOrder = async (id) => {
     try {
-      await axios.delete(`https://arfa-ecommerce.onrender.com/api/cancelled/${id}`);
+      await axios.delete(`http://localhost:4000/api/cancelled/${id}`);
       setCancelledOrders(cancelledOrders.filter((order) => order._id !== id));
       alert("Order removed successfully!");
     } catch (err) {

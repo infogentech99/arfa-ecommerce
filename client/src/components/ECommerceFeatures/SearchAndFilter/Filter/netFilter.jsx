@@ -20,7 +20,7 @@ const NetFilter = () => {
 
     // Fetching the list of Lggage from the backend API
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/net")
+      .get("http://localhost:4000/api/net")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const NetFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `https://arfa-ecommerce.onrender.com/api/net/${id}`
+        `http://localhost:4000/api/net/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

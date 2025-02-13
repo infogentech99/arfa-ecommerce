@@ -20,7 +20,7 @@ const ChiffonFilter = () => {
 
     // Fetching the list of Kds from the backend API
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/chiffon")
+      .get("http://localhost:4000/api/chiffon")
       .then((res) => {
         setProducts(res.data);
       })
@@ -32,7 +32,7 @@ const ChiffonFilter = () => {
   // Function to remove a product by id
   const handleRemoveProduct = async (id) => {
     try {
-      await axios.delete(`https://arfa-ecommerce.onrender.com/api/chiffon/${id}`);
+      await axios.delete(`http://localhost:4000/api/chiffon/${id}`);
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");
     } catch (error) {

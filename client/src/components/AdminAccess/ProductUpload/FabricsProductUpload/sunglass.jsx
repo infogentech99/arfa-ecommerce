@@ -28,7 +28,7 @@ const SunglassProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/sunglass",
+        "http://localhost:4000/api/sunglass",
         productData
       );
       alert("Product added successfully!");

@@ -8,7 +8,7 @@ const PlaceYourOrder = ({ isOrderPlaceable }) => {
   const placeOrder = async () => {
     try {
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/cartandplaceorder/place-order"
+        "http://localhost:4000/api/cartandplaceorder/place-order"
       );
 
       if (response.status === 200) {

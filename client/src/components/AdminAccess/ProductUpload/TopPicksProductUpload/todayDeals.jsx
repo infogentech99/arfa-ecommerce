@@ -28,7 +28,7 @@ const TodayDealProductUpload = () => {
     try {
       // Send POST request to add product to the backend
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/todaydeals",
+        "http://localhost:4000/api/todaydeals",
         productData
       );
       alert("Product added successfully!");

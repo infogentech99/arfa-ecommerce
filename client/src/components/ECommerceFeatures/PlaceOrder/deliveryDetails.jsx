@@ -15,7 +15,7 @@ const DeliveryDetails = ({ setSelectedAddress }) => {
   // Fetch delivery addresses from the server
   useEffect(() => {
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/deliverydetails")
+      .get("http://localhost:4000/api/deliverydetails")
       .then((res) => {
         setAddAddress(res.data);
       })
@@ -55,7 +55,7 @@ const DeliveryDetails = ({ setSelectedAddress }) => {
 
     try {
       const response = await axios.post(
-        "https://arfa-ecommerce.onrender.com/api/deliverydetails",
+        "http://localhost:4000/api/deliverydetails",
         deliveryData
       );
       alert("Address added successfully!");
@@ -70,7 +70,7 @@ const DeliveryDetails = ({ setSelectedAddress }) => {
   const handleRemoveAddress = async (id) => {
     if (window.confirm("Are you sure you want to delete this address?")) {
       try {
-        await axios.delete(`https://arfa-ecommerce.onrender.com/api/deliverydetails/${id}`);
+        await axios.delete(`http://localhost:4000/api/deliverydetails/${id}`);
         setAddAddress((prev) => prev.filter((address) => address._id !== id));
         alert("Address removed successfully!");
       } catch (error) {

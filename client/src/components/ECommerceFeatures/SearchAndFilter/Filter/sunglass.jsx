@@ -20,7 +20,7 @@ const SunglassFilter = () => {
 
     // Fetching the list of Sunglass from the backend API
     axios
-      .get("https://arfa-ecommerce.onrender.com/api/sunglass")
+      .get("http://localhost:4000/api/sunglass")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const SunglassFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `https://arfa-ecommerce.onrender.com/api/sunglass/${id}`
+        `http://localhost:4000/api/sunglass/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");

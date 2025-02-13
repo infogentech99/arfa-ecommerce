@@ -34,14 +34,14 @@ export const ProductProvider = ({ children }) => {
   // Fetch catgory data from API
   useEffect(() => {
     Promise.all([
-      axios.get("https://arfa-ecommerce.onrender.com/api/lawn"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/velvet"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/chiffon"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/cotton"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/net"),
-      // axios.get("https://arfa-ecommerce.onrender.com/api/watches"),
-      // axios.get("https://arfa-ecommerce.onrender.com/api/handbags"),
-      // axios.get("https://arfa-ecommerce.onrender.com/api/sunglass"),
+      axios.get("http://localhost:4000/api/lawn"),
+      axios.get("http://localhost:4000/api/velvet"),
+      axios.get("http://localhost:4000/api/chiffon"),
+      axios.get("http://localhost:4000/api/cotton"),
+      axios.get("http://localhost:4000/api/net"),
+      // axios.get("http://localhost:4000/api/watches"),
+      // axios.get("http://localhost:4000/api/handbags"),
+      // axios.get("http://localhost:4000/api/sunglass"),
     ])
       .then(
         ([
@@ -96,10 +96,10 @@ export const ProductProvider = ({ children }) => {
   // Fetch featured items from API
   useEffect(() => {
     Promise.all([
-      axios.get("https://arfa-ecommerce.onrender.com/api/trending"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/bestseller"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/todaydeals"),
-      axios.get("https://arfa-ecommerce.onrender.com/api/newarrival"),
+      axios.get("http://localhost:4000/api/trending"),
+      axios.get("http://localhost:4000/api/bestseller"),
+      axios.get("http://localhost:4000/api/todaydeals"),
+      axios.get("http://localhost:4000/api/newarrival"),
     ])
       .then(([trendingRes, bestsellerRes, todaydealRes, newarrivalRes]) => {
         setTrending(trendingRes.data);

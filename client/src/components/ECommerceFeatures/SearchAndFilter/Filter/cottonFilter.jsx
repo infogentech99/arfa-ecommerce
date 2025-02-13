@@ -20,7 +20,7 @@ const CottonFilter = () => {
 
     axios
       // Fetching the list of Fotwear products from the backend API
-      .get("https://arfa-ecommerce.onrender.com/api/cotton")
+      .get("http://localhost:4000/api/cotton")
       .then((res) => {
         setProducts(res.data);
       })
@@ -33,7 +33,7 @@ const CottonFilter = () => {
   const handleRemoveProduct = async (id) => {
     try {
       await axios.delete(
-        `https://arfa-ecommerce.onrender.com/api/cotton/${id}`
+        `http://localhost:4000/api/cotton/${id}`
       );
       setProducts((prev) => prev.filter((product) => product._id !== id));
       alert("Product removed successfully!");
